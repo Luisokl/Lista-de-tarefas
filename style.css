@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    min-height: 100vh;
+}
+
+.container {
+    padding: 20px;
+    border: 1px solid #000;
+    width: max(50%, 350px);
+}
+
+.container .title {
+    text-align: center;
+}
