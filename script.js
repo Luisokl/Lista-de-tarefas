@@ -23,12 +23,17 @@ function renderizarTela() {
     listElement.innerHTML ='';
     
     tarefas.map((task, index) => {
+        let divElement = document.createElement('div');
+        divElement.textContent = task;
         let liElement = document.createElement('li');
-        liElement.textContent = task;
+        liElement.appendChild(divElement);
+
+
         let buttonRemover = document.createElement('button');
         buttonRemover.textContent = 'Excluir';
         liElement.appendChild(buttonRemover);
         liElement.style.listStyleType = 'none'
+
         listElement.appendChild(liElement);
 
         buttonRemover.addEventListener('click', (index)=> {

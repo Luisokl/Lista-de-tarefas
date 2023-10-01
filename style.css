@@ -29,17 +29,34 @@ body {
 
 .container #app input{
     min-width: 230px;
-    padding: 3px 15px;
+    padding: 5px 15px;
+    border: 1px solid #c2bcbc;
+    border-radius: 5px;
 }
 .container #app button {
-    padding: 3px 15px;
+    padding: 5px 15px;
+    border: 1px solid #c2bcbc;
+    border-radius: 5px;
 }
 
 .container #body {
     margin-top: 10px;
 }
 .container #body ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 5px 5px;
     margin: 5px 0;
-    border: 1px solid #000;
+    border: 1px solid #c2bcbc;
+    border-radius: 5px;
+}
+.container #body ul li div {
+    display: inline-block;
+}
+.container #body ul li button {
+    padding: 3px 10px;
+    margin-left: 3px;
+    border: 1px solid #c2bcbc;
+    border-radius: 5px;
 }
