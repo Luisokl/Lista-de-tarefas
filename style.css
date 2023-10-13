@@ -12,44 +12,98 @@ body {
     justify-content: center;
     align-items: start;
     min-height: 100vh;
+    background-color: #000;
 }
 
 .container {
     margin-top: 20px;
     padding: 10px;
-    border: 1px solid #000;
-    width: max(50%, 350px);
+    border-radius: 10px;
+    background: #222;
+    width: max(40%, 350px);
 }
 
 .container .title {
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 10px;
+    color: #f3450f;
 }
 
-.container #app input{
+.container-app {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#app input{
     min-width: 230px;
-    padding: 5px 15px;
-    border: 1px solid #c2bcbc;
+    padding: 8px 15px;
+    margin-right: 10px;
     border-radius: 5px;
+    color: #413e3e;
+    border: none;
 }
-.container #app button {
-    padding: 5px 15px;
-    border: 1px solid #c2bcbc;
+#app input:focus {
+    outline: none;
+}
+
+
+
+
+.button {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    height: 2rem;
+    padding: 10px 15px;
     border-radius: 5px;
-}
+    background: #3d3a4e;
+    background-size: 400%;
+    color: #FFF;
+    border: transparent;
+  }
+  
+  .button:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .button-content {
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: #f3450f;
+    color: #FFF;
+    transition: all 0.475s;
+  }
+
 
 .container #body {
-    margin-top: 10px;
+    margin-top: 30px;
 }
 .container #body ul li {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5px 5px;
+    padding: 5px 8px;
     margin: 5px 0;
-    border: 1px solid #c2bcbc;
     border-radius: 5px;
+    color: #413e3e;
+    background-color: #fff;
 }
 .container #body ul li div {
     display: inline-block;
