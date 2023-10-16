@@ -45,8 +45,7 @@ function renderizarTela() {
         listElement.appendChild(liElement);
 
         buttonEditar.addEventListener('click', () => {
-            const index = tarefas.indexOf(task);
-            editarTarefa(index, listElement);
+            
             
         })
 
@@ -57,29 +56,8 @@ function renderizarTela() {
     }) 
 }
 
-function editarTarefa(index, listElement) {
-    let liElement = listElement.children[index];
-    let divElement = liElement.children[0];
-    let divbuttons = liElement.children[1];
-
-    let inputEdit = document.createElement('input');
-    inputEdit.value = divElement.textContent;
-    divElement.textContent = '';
-    divElement.appendChild(inputEdit);
-
-    let buttonConfirm = document.createElement('button');
-    buttonConfirm.textContent = 'confirmar'
-    divbuttons.appendChild(buttonConfirm);
-
-    buttonConfirm.removeEventListener('click', confirmEdit);
-    buttonConfirm.addEventListener('click', confirmEdit);
-
-    function confirmEdit() {
-        tarefas[index] = inputEdit.value;
-        divElement.textContent = inputEdit.value;
-        inputEdit.remove();
-        buttonConfirm.remove();
-    }
+function editarTarefa() {
+    
 }
 
 function deletarTarefa(index) {
