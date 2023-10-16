@@ -92,25 +92,38 @@ body {
   }
 
 
-.container #body {
+#body {
     margin-top: 30px;
 }
-.container #body ul li {
+#body ul li {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5px 8px;
+    padding: 5px 5px 5px 10px;
     margin: 5px 0;
     border-radius: 5px;
     color: #413e3e;
     background-color: #fff;
 }
-.container #body ul li div {
+#body ul li div {
     display: inline-block;
 }
-.container #body ul li button {
-    padding: 3px 10px;
+#body ul li div input {
+    border: none;
+    outline: none;
+}
+#body ul li button {
+    padding: 3px 5px;
     margin-left: 3px;
-    border: 1px solid #c2bcbc;
+    border: 1px solid #a3a2a2;
     border-radius: 5px;
+}
+#body ul li button:hover {
+    transform: scale(1.1);
+}
+
+
+#body ul li button img {
+    width: 20px;
+    height: auto;
 }
