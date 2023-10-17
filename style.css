@@ -99,7 +99,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5px 5px 5px 10px;
+    padding: 5px 5px 5px 2px;
     margin: 5px 0;
     border-radius: 5px;
     color: #413e3e;
@@ -108,6 +108,7 @@ body {
 #body ul li div {
     display: inline-block;
 }
+
 #body ul li div input {
     border: none;
     outline: none;

@@ -23,33 +23,44 @@ function renderizarTela() {
     listElement.innerHTML ='';
     
     tarefas.map((task, index) => {
-        let divElement = document.createElement('div');
-        divElement.textContent = task;
+        let spanElementTask = document.createElement('span');
+        spanElementTask.textContent = task;
+
         let liElement = document.createElement('li');
-        liElement.appendChild(divElement);
+        liElement.appendChild(spanElementTask);
 
         let divbuttons = document.createElement('div');
-        let buttonRemover = document.createElement('button');
-        let buttonEditar = document.createElement('button');
+
+        let buttonRemoverTask = document.createElement('button');
         let imageLixeira = document.createElement('img');
-        let imagePencil = document.createElement('img');
-        imagePencil.src = '/img/lapis.png'
         imageLixeira.src = '/img/excluir.png';
-        buttonRemover.appendChild(imageLixeira); 
-        buttonEditar.appendChild(imagePencil);
-        divbuttons.appendChild(buttonEditar);
-        divbuttons.appendChild(buttonRemover);
+        buttonRemoverTask.appendChild(imageLixeira); 
+
+        let buttonEditarTask = document.createElement('button');
+        let imagePencil = document.createElement('img');
+        imagePencil.src = '/img/lapis.png';
+        buttonEditarTask.appendChild(imagePencil);
+
+        let buttonCompleteTask = document.createElement('button');
+        let imageCompleteTask = document.createElement('img');
+        imageCompleteTask.src = 'img/check.png';
+        buttonCompleteTask.appendChild(imageCompleteTask);
+        
+        divbuttons.appendChild(buttonCompleteTask);
+        divbuttons.appendChild(buttonEditarTask);
+        divbuttons.appendChild(buttonRemoverTask);
+        
         liElement.appendChild(divbuttons);
         liElement.style.listStyleType = 'none'
 
         listElement.appendChild(liElement);
 
-        buttonEditar.addEventListener('click', () => {
+        buttonEditarTask.addEventListener('click', () => {
             
             
         })
 
-        buttonRemover.addEventListener('click', () => {
+        buttonRemoverTask.addEventListener('click', () => {
             const index = tarefas.indexOf(task);
             deletarTarefa(index);
         });
