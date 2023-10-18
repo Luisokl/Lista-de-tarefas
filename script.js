@@ -55,6 +55,17 @@ function renderizarTela() {
 
         listElement.appendChild(liElement);
 
+        /*buttonCompleteTask.addEventListener('click', () => {
+            let index = tarefas.indexOf(task);
+    
+            let elementDomtask = document.getElementsByTagName('span')[1];
+        
+            
+            console.log(elementDomtask)
+            
+            
+        })*/
+
         buttonEditarTask.addEventListener('click', () => {
             
             
