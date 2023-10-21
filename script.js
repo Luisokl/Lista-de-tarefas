@@ -3,7 +3,9 @@ let buttonAdd = document.querySelector('#app button');
 let listElement = document.querySelector ('#body ul');
 
 
-let tarefas = [];
+let tarefas = JSON.parse(localStorage.getItem("ListaTarefas")) || [] ;
+
+renderizarTela();
 
 buttonAdd.addEventListener('click', adicionarTarefas);
 
@@ -17,6 +19,7 @@ function adicionarTarefas() {
         taskElement.value = ''
         tarefas.push(tasksElement);        
         renderizarTela();
+        salvaDados();
     }
 }
 
@@ -77,10 +80,14 @@ function renderizarTela() {
 function concluirTarefa(index) {
     let listElementLi = document.querySelectorAll ('#body ul li span');
     listElementLi[index].classList.add('task-concluida');
-    
 }
 
 function deletarTarefa(index) {
     tarefas.splice(index, 1);
     renderizarTela();
+    salvaDados();
 };
+
+function salvaDados() {
+    localStorage.setItem("ListaTarefas", JSON.stringify(tarefas))
+}
