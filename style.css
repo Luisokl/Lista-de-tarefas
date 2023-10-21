@@ -108,11 +108,11 @@ body {
 #body ul li span {
     display: inline-block;
 }
-/*
+
 .task-concluida {
     text-decoration: line-through;
     text-decoration-thickness: 2px;
-}*/
+}
 
 #body ul li div input {
     border: none;

@@ -2,6 +2,7 @@ let taskElement = document.querySelector('#app input');
 let buttonAdd = document.querySelector('#app button');
 let listElement = document.querySelector ('#body ul');
 
+
 let tarefas = [];
 
 buttonAdd.addEventListener('click', adicionarTarefas);
@@ -55,16 +56,10 @@ function renderizarTela() {
 
         listElement.appendChild(liElement);
 
-        /*buttonCompleteTask.addEventListener('click', () => {
+        buttonCompleteTask.addEventListener('click', () => {
             let index = tarefas.indexOf(task);
-    
-            let elementDomtask = document.getElementsByTagName('span')[1];
-        
-            
-            console.log(elementDomtask)
-            
-            
-        })*/
+            concluirTarefa(index)
+        });
 
         buttonEditarTask.addEventListener('click', () => {
             
@@ -78,7 +73,10 @@ function renderizarTela() {
     }) 
 }
 
-function editarTarefa() {
+
+function concluirTarefa(index) {
+    let listElementLi = document.querySelectorAll ('#body ul li span');
+    listElementLi[index].classList.add('task-concluida');
     
 }
 
